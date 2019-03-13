@@ -2,7 +2,7 @@
   "name": "teste_cli",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,10 +17,10 @@
     "url": "https://github.com/joao1559/teste_cli/issues"
   },
   "homepage": "https://github.com/joao1559/teste_cli#readme",
-  "preferGlobal": true,
-  "bin": "./src/main.js",
   "dependencies": {
     "colors": "^1.3.3",
     "commander": "^2.19.0"
-  }
+  },
+  "preferGlobal": true,
+  "bin": "./src/index.js"
 }
