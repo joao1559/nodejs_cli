@@ -1,17 +1,22 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const colors = require('colors');
+const youtubeDownload = require('./services/youtubeDownload')
+const programs = require('./services/program')
  
 program
-  .command('console <text>')
-  .option('-r, --rainbow <color>', 'Cor do texto')
-  .action(function (text, cmd) {
-    if(cmd.rainbow) {
-        console.log(colors[cmd.rainbow](text))
-    } else {
-        console.log(text)
-    }
+  .command('download <link>')
+  .option('-p, --path <path>', 'Caminho para salvar arquivo')
+  .action(function (link, cmd) {
+    youtubeDownload.download(link, cmd)
+  })
+
+program
+  .command('add')
+  .option('-n, --name <nome>', 'Adiciona um nome ao programa')
+  .option('-p, --path <caminho>', 'Adiciona um caminho ao programa')
+  .action(function (cmd) {
+    programs.add(cmd)
   })
  
 program.parse(process.argv)
