@@ -18,5 +18,19 @@ program
   .action(function (cmd) {
     programs.add(cmd)
   })
+
+program
+  .command('start <name>')
+  .action(function (text) {
+    programs.start(text)
+  })
+
+program
+  .command('clear')
+  .action(function () {
+    programs.remove()
+  })
  
+program
+
 program.parse(process.argv)
