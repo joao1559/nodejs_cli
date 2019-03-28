@@ -30,7 +30,5 @@ program
   .action(function () {
     programs.remove()
   })
- 
-program
 
 program.parse(process.argv)
