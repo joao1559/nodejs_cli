@@ -44,7 +44,7 @@ async function start(name) {
 
     exec(`cd ${path} && start ${nameExec}`);
 }
-@
+
 async function remove() {
     if(await fs.existsSync(`${appData}\\teste_cli_data.json`)) 
         await fs.unlinkSync(`${appData}\\teste_cli_data.json`)
